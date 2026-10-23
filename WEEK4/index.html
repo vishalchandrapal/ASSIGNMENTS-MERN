@@ -108,6 +108,61 @@
         margin-right: 10px;
     }
 
+:root {
+    --primary-color: blue;
+    --dark-color: #172554;
+    --bg-color: #f1f5f9;
+    --text-color: #1e293b;
+    --spacing: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+.site-header, .site-footer {
+    background: var(--dark-color);
+    color: white;
+    padding: var(--spacing);
+    text-align: center;
+}
+
+.card {
+    background: white;
+    padding: var(--spacing);
+    margin: var(--spacing);
+    border-radius: 10px;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px var(--spacing);
+    border: none;
+    cursor: pointer;
+}
+
+#home {
+    border-top: 4px solid var(--primary-color);
+}
+
+#events {
+    border-top: 4px solid var(--dark-color);
+}
+
+#register {
+    border-top: 4px solid var(--primary-color);
+}
+
+
+
 </style>
 <body>
 
