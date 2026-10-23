@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="College Tech Club events and student registration">
+    <title>Tech Club</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Tech Club</h1>
+        
+    </header>
+
+    <nav>
+        <a href="#home">Home</a> |
+        <a href="#events">Events</a> |
+        <a href="#register">Register</a>
+    </nav>
+<hr>
+    <main>
+
+        <section id="events">
+            <h2>Upcoming Events</h2>
+
+            <table border="1" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Coding Competition</td>
+                        <td>10 November 2026</td>
+                        <td>Computer Lab</td>
+                    </tr>
+                    <tr>
+                        <td>Web Development Workshop</td>
+                        <td>15 November 2026</td>
+                        <td>Seminar Hall</td>
+                    </tr>
+                    <tr>
+                        <td>Project Exhibition</td>
+                        <td>20 November 2026</td>
+                        <td>College Auditorium</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total Events: 3</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <br>
+
+        <hr>
+
+        <section id="register">
+            <h2>Student Registration Form</h2>
+
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your name" required>
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+                <br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="Enter your phone number">
+                <br><br>
+
+                <label for="course">Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">Select your course</option>
+                    <option value="BTech CSE">B.Tech CSE</option>
+                    <option value="BTech IT">B.Tech IT</option>
+                    <option value="BTech ECE">B.Tech ECE</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br><br>
+
+                <p>Year of Study:</p>
+
+                <input type="radio" id="first" name="year"
+                       value="First Year" required>
+                <label for="first">First Year</label>
+
+                <input type="radio" id="second" name="year"
+                       value="Second Year">
+                <label for="second">Second Year</label>
+
+                <input type="radio" id="third" name="year"
+                       value="Third Year">
+                <label for="third">Third Year</label>
+
+                <input type="radio" id="fourth" name="year"
+                       value="Fourth Year">
+                <label for="fourth">Fourth Year</label>
+                <br><br>
+
+                <p>Areas of Interest:</p>
+
+                <input type="checkbox" id="java" name="interest"
+                       value="Java">
+                <label for="java">Java</label>
+
+                <input type="checkbox" id="web" name="interest"
+                       value="Web Development">
+                <label for="web">Web Development</label>
+
+                <input type="checkbox" id="ai" name="interest"
+                       value="AI">
+                <label for="ai">Artificial Intelligence</label>
+                <br><br>
+
+                <label for="message">Why do you want to join?</label>
+                <br>
+                <textarea id="message" name="message"
+                          rows="4" cols="35"
+                          placeholder="Write a short message"></textarea>
+                <br><br>
+                <hr>
+                <button type="submit">Register Now</button>
+                <button type="reset">Clear Form</button>
+            </form>
+        </section>
+    </main>
+<br>
+    <hr>
+    <footer>
+        <p>&copy; 2026 Tech Club | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
