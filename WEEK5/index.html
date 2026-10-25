@@ -91,11 +91,44 @@
     .green .btn {
       background: green;
     }
+
+    /* Top bar stays at the top while scrolling */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: blue;
+  color: white;
+  padding: 15px 20px;
+}
+
+/* Plus button stays fixed on the screen */
+.plus-btn {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 1100;
+
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+
+  background:black;
+  color: white;
+  font-size: 30px;
+}
+
   </style>
   
 </head>
 
 <body>
+    <header class="top-bar">
+      <h2>My Profile</h2>
+    </header>
+
+    <button class="plus-btn">+</button>
 
   <div class="container">
 
