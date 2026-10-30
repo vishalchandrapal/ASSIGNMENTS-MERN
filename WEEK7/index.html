@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> CSS Grid </title>
-    <style>
-      
+    <title>Grid and Flexbox Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +23,7 @@
         "side main"
         "foot foot";
 
-    grid-template-columns: 200px 2fr;
+    grid-template-columns: 200px 1fr;
     grid-template-rows: 80px 400px 80px;
 
     gap: 10px;
@@ -30,17 +32,17 @@
 
 .head {
     grid-area: head;
-    background-color: blue;
+    background-color:blue;
 }
 
 .side {
     grid-area: side;
-    background-color:green;
+    background-color: green;
 }
 
 .main {
     grid-area: main;
-    background-color:yellow;
+    background-color: yellow;
 }
 
 .foot {
@@ -48,27 +50,46 @@
     background-color: red;
 }
 
+/* Flexbox inside every box */
 .head, .side, .main, .foot {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    gap: 12px;
+
+    font-size: 25px;
     font-weight: bold;
 }
 
-    </style>
-</head>
+.icon {
+    font-size: 30px;
+}
+
+</style>
 <body>
 
     <div class="container">
 
-        <header class="head">HEADER</header>
+        <header class="head">
+            <span class="icon">🏠</span>
+            <span>HEADER</span>
+        </header>
 
-        <aside class="side">SIDEBAR</aside>
+        <aside class="side">
+            <span class="icon">📋</span>
+            <span>SIDEBAR</span>
+        </aside>
 
-        <main class="main">MAIN CONTENT</main>
-        
-        <footer class="foot">FOOTER</footer>
+        <main class="main">
+            <span class="icon">💻</span>
+            <span>MAIN CONTENT</span>
+        </main>
+
+        <footer class="foot">
+            <span class="icon">📞</span>
+            <span>FOOTER</span>
+        </footer>
 
     </div>
 
