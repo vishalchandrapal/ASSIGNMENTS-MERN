@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid and Flexbox Layout</title>
+    <title>Responsive Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
@@ -15,7 +15,13 @@
     box-sizing: border-box;
 }
 
-.container {
+body {
+    font-family: Arial, sans-serif;
+    background-color:white;
+}
+
+.dashboard {
+    min-height: 100vh;
     display: grid;
 
     grid-template-areas:
@@ -23,76 +29,197 @@
         "side main"
         "foot foot";
 
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 80px 400px 80px;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 70px 1fr 60px;
 
     gap: 10px;
     padding: 10px;
 }
 
-.head {
+.topbar {
     grid-area: head;
-    background-color:blue;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 25px;
 }
 
-.side {
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.profile {
+    font-size: 20px;
+}
+
+.sidebar {
     grid-area: side;
-    background-color: green;
+    background-color: grey;
+    color: white;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item {
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .main {
     grid-area: main;
-    background-color: yellow;
+    background-color: white;
+    padding: 20px;
 }
 
-.foot {
-    grid-area: foot;
-    background-color: red;
-}
-
-/* Flexbox inside every box */
-.head, .side, .main, .foot {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-
+.main h2 {
+    margin-bottom: 20px;
     font-size: 25px;
-    font-weight: bold;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+
+.card {
+    background-color:lightcyan;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .icon {
     font-size: 30px;
 }
 
+.card p {
+    font-size: 25px;
+    font-weight: bold;
+    color: blue;
+}
+
+
+.footer {
+    height: 100px;
+    grid-area: foot;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+
+    .dashboard {
+        grid-template-areas:
+            "head"
+            "side"
+            "main"
+            "foot";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px auto 1fr 60px;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-item {
+        padding: 10px;
+    }
+}
+
 </style>
 <body>
 
-    <div class="container">
+    <div class="dashboard">
 
-        <header class="head">
-            <span class="icon">🏠</span>
-            <span>HEADER</span>
+        <header class="topbar">
+            <div class="logo">My Dashboard</div>
+            <div class="profile">👤 Admin</div>
         </header>
 
-        <aside class="side">
-            <span class="icon">📋</span>
-            <span>SIDEBAR</span>
+        <aside class="sidebar">
+            <div class="menu-item">🏠 Dashboard</div>
+            <div class="menu-item">👥 Users</div>
+            <div class="menu-item">📊 Reports</div>
+            <div class="menu-item">⚙️ Settings</div>
         </aside>
 
         <main class="main">
-            <span class="icon">💻</span>
-            <span>MAIN CONTENT</span>
+
+            <h2>Dashboard Overview</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <span class="icon">👥</span>
+                    <h3>Total Users</h3>
+                    <p>1,250</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">💰</span>
+                    <h3>Total Sales</h3>
+                    <p>₹45,000</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">📦</span>
+                    <h3>Products</h3>
+                    <p>320</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">📈</span>
+                    <h3>Growth</h3>
+                    <p>25%</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">🛒</span>
+                    <h3>Orders</h3>
+                    <p>850</p>
+                </div>
+
+                <div class="card">
+                    <span class="icon">⭐</span>
+                    <h3>Reviews</h3>
+                    <p>450</p>
+                </div>
+
+            </div>
+
         </main>
 
-        <footer class="foot">
-            <span class="icon">📞</span>
-            <span>FOOTER</span>
+        <footer class="footer">
+         My Dashboard Made with CSS Grid and Flexbox
         </footer>
 
     </div>
 
 </body>
 </html>
-
