@@ -4,82 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex Navbar</title>
-   
+    <title>Banner</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: grey;
-        padding: 10px 20px;
-    }
-
-    .logo {
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    .nav-right {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-links {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        margin-left: 20px;
-    }
-
-    .nav-links li {
-        margin-left: 20px;
-    }
-
-   
-    .btn {
-        margin-left: 20px;
-        padding: 8px 16px;
-        background-color: green;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-   
-    </style> 
-
 <body>
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <nav class="navbar">
-        <!-- Logo on Left -->
-        <div class="logo">
-            MyWebsite
-        </div>
+.banner {
+    height: 400px;
+    background-color: rgb(173, 183, 230);
 
-        <!-- Links and Button on Right -->
-        <div class="nav-right">
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-            <button class="btn">Login</button>
-        </div>
-    </nav>
+    text-align: center;
+    gap: 15px;
+}
+
+.banner button {
+    padding: 10px 20px;
+    background-color: rgb(0, 100, 200);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+    </style>
+
+
+    <section class="banner">
+        <h1>Welcome to My Website</h1>
+        <p>Learn HTML, CSS and JavaScript</p>
+        <button>Get started</button>
+    </section>
 
 </body>
 </html>
