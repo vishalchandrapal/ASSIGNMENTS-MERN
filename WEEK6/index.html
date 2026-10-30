@@ -87,6 +87,24 @@
     
 }
 
+/* <---cards ---> */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    flex: 1 1 200px;
+    background-color: rgb(173, 183, 230);
+    padding: 30px;
+    border-radius: 10px;
+}
+.card h2 {
+    margin-bottom: 10px;
+}
+
     </style> 
 
 <body>
@@ -110,11 +128,35 @@
         </div>
     </nav>
     
+    <!-- banner -->
      <section class="banner">
         <h1>Welcome to My Website</h1>
         <p>Learn HTML, CSS and JavaScript</p>
         <button>Get started</button>
     </section>
+
+    <!-- cards  -->
+     <div class="container">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>Build the structure</p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>Make it beautiful</p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>Make it smart</p>
+        </div>
+
+        <div class="card">
+            <h2>GIT</h2>
+            <p>Save your work</p>
+        </div>
 
 </body>
 </html>
