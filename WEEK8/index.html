@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Website</title>
-    <link rel="stylesheet" href="style.css">
+ 
 </head>
 <style>
     
@@ -16,38 +16,58 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    font-size: 1rem;
 }
 
 header {
     background-color: navy;
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: large;
+    padding: 1.25rem;
+}
+
+header h1 {
+    font-size: 2rem;
 }
 
 nav {
     background-color: black;
-    padding: 15px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1rem;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 .container {
-    padding: 15px;
+    padding: 1rem;
 }
 
 .box {
     background-color: lightblue;
-    padding: 20px;
-    margin-bottom: 15px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
     text-align: center;
+}
+
+.box h2 {
+    font-size: 1.5rem;
+}
+
+.box p {
+    font-size: 1rem;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 
@@ -60,26 +80,40 @@ nav a {
     .container {
         display: flex;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 1rem;
     }
 
     .box {
-        width: calc(50% - 8px);
+        width: calc(50% - 0.5rem);
     }
 }
 
-
 @media (min-width: 1024px) {
     .container {
-        max-width: 1200px;
+        max-width: 75rem;
         margin: auto;
     }
 
     .box {
-        width: calc(33.333% - 10px);
+        width: calc(33.333% - 0.67rem);
     }
 }
 
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img{
+    display: block;
+    margin: 0 auto;
+}
+
+.image{
+    max-width: 100%;
+    height: auto;
+}
 </style>
 <body>
 
@@ -96,17 +130,20 @@ nav a {
 
     <main class="container">
         <div class="box">
-            <h2>Easy Boxing</h2>
+            <h2>Easy Booking</h2>
+            <img class="image"  src="https://cdn.pixabay.com/photo/2016/07/12/18/38/package-1512783_1280.png " height="100px" width="200px" alt="image1">
             <p>book in 3 clicks</p>
         </div>
 
         <div class="box">
             <h2>Best Prices</h2>
+            <img class="image"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyWULV5Bt_mR4NI3tqQKpywj0KN_AFLPK6UMr6uCGajdKjZb9OmpI828&s=10" height="100px" width="200px" alt="image2">
             <p>we compare for you</p>
         </div>
 
         <div class="box">
             <h2>24x7 help</h2>
+            <img class="image"  src="https://png.pngtree.com/png-vector/20200922/ourmid/pngtree-24-hour-clock-delivery-service-png-image_2347315.jpg"height="100px" width="200px" alt="image3">
             <p>always here to help you</p>
         </div>
     </main>
