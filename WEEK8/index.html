@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: large;
+}
+
+nav {
+    background-color: black;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    padding: 15px;
+}
+
+.box {
+    background-color: lightblue;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .box {
+        width: calc(50% - 8px);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .box {
+        width: calc(33.333% - 10px);
+    }
+}
+
+</style>
+<body>
+
+    <header>
+        <h1>My Website</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main class="container">
+        <div class="box">
+            <h2>Easy Boxing</h2>
+            <p>book in 3 clicks</p>
+        </div>
+
+        <div class="box">
+            <h2>Best Prices</h2>
+            <p>we compare for you</p>
+        </div>
+
+        <div class="box">
+            <h2>24x7 help</h2>
+            <p>always here to help you</p>
+        </div>
+    </main>
+
+</body>
+</html>
